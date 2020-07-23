@@ -23,7 +23,7 @@ This command starts a Collector instance that receives OTLP metrics and export t
 
     go run main.go
 
-This command starts generating metric events from two counter and a valuerecorder instument, and sends metrics using Go SDK's OTLP exporter once per second. 
+This command starts generating metric events from two counter and a valuerecorder instument, and sends metrics to the collector using Go SDK's OTLP exporter once per second. 
 
 ## Checking Values
 Access the Prometheus dashboard at `localhost:9090`. Select the graph option and `a_counter_1` or `a_counter_i` as the expression, then press Execute to see the updates. Note that the graph does not update automatically and that updates will not appear until the Prometheus instance says in the console that it is ready to begin retrieving data.
