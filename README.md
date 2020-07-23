@@ -13,13 +13,13 @@ This demo aims to check whether the Collector Prometheus Exporter successfully s
 
 This commmand starts a Prometheus instance that scrapes from `localhost:8800` once per second
 
-#Run OT Collector:
+### Run OT Collector:
 
     otel-col --config collector.config
 
 This command starts a Collector instance that receives OTLP metrics and export the metric to Prometheus using the Prometheus exporter.
 
-Generate Metric:
+### Generate Metric:
 
     go run main.go
 
