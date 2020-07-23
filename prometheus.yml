@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 1s
+
+  external_labels:
+    monitor: 'demo'
+
+scrape_configs:
+  - job_name: 'demo'
+
+    scrape_interval: 1s
+
+    static_configs:
+      - targets: ['localhost:8800']
