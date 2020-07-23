@@ -1,6 +1,6 @@
 # Prometheus Go Exporter Demo
 
-This demo aims to check whether the Collector Prometheus Exporter successfully retrieves cumulative metircs sent from the Go SDK.
+This demo aims to check whether the Collector Prometheus Exporter successfully sends cumulative metircs retrieved from the Go SDK.
 
 ## Setup
 [Download OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector/releases)
