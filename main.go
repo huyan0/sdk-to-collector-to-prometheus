@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-
+	// initiate OTLP exporter
 	exporter, err := otlp.NewExporter(
 		otlp.WithInsecure()) // Configure as needed.
 	if err != nil {
@@ -27,7 +27,7 @@ func main() {
 			log.Fatalf("failed to stop exporter: %v", err)
 		}
 	}()
-
+	// initiate push controller
 	pusher := push.New(simple.NewWithInexpensiveDistribution(), exporter, push.WithPeriod(1*time.Second))
 
 	pusher.Start()
@@ -57,7 +57,7 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(1)
 	value := 0
-	// Repeatedly record values every 3 seconds
+	// Repeatedly record values every 1 seconds
 	go func() {
 		for i := 1; i <= 100; i++ {
 			time.Sleep(1 * time.Second)
