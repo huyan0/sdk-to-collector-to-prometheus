@@ -38,7 +38,7 @@ func main() {
 	// Create two instruments with Go SDK metric package
 	counter0 := metric.Must(meter).NewInt64Counter(
 		"a_counter_i",
-		metric.WithDescription("Adds i every time, growth should be O(i!)"),
+		metric.WithDescription("Adds i every time, growth should be O(i^2)"),
 	)
 	counter1 := metric.Must(meter).NewInt64Counter(
 		"a_counter_1",
